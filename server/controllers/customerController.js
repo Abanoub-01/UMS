@@ -225,6 +225,19 @@ exports.allCourses = async (req, res) => {
     console.log(error);
     res.status(500).send('Internal Server Error');
   }
+
+};
+exports.courseMarks = async (req, res) => {
+  try {
+    // Fetch all courses from the database
+    const courses = await Course.find();
+
+    // Render the allCourses view and pass the courses data
+    res.render('students/viewMarks', { courses });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send('Internal Server Error');
+  }
 };
 
 

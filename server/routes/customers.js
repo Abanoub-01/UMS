@@ -18,6 +18,8 @@ router.all('/search', customerController.searchStudents);
 router.get('/addCourse',customerController.addCourse);
 router.post('/addCourse', customerController.postCourse); 
 router.get('/viewCourse', customerController.allCourses);
+router.get('/viewMarks', customerController.courseMarks);
+
 
 
 //to update courses
